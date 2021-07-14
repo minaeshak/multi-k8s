@@ -9,5 +9,5 @@ docker push minaeshak/multi-server:$SHA
 docker push minaeshak/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=minaeshak/multi-server:$SHA
-kubectl set image deployments/client-deployment server=minaeshak/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=minaeshak/worker-server:$SHA
+kubectl set image deployments/client-deployment client=minaeshak/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=minaeshak/worker-server:$SHA
